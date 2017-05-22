@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+   <title></title>
+  <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+ 
+ 
+<script>
+    function addEvent(o, evt, func) {
+        if (o.addEventListener) o.addEventListener(evt, func, false);
+        else if (o.attachEvent) o.attachEvent('on' + evt, func);
+    }
+    function addDocClickEvt(obj) {
+        addEvent(obj.contentWindow.document, 'click', function () {alert('点击了iframe里面的内容') });
+          
+		  var id = obj.id;
+		  var subWeb = document.frames ? document.frames[id].document : obj.contentDocument;   
+		  if(obj != null && subWeb != null)
+		  {
+			 obj.height = subWeb.body.scrollHeight;
+		  }   
+    }
+
+</script>
+
+</head>
+
+<body>
+   <div id="iframeContain" >
+			<iframe  src='index.html'  style="display:block;" width="1280px" height="780px" onload="addDocClickEvt(this)" ></iframe>
+   </div>
+</body>
+</html>

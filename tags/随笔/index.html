@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+   <title></title>
+ <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/flexslider.css" />
+  <link href="http://www.ijquery.cn/frame/v2/v2.css" rel="stylesheet">
+  <script src="http://www.ijquery.cn/frame/v2/v2.js"></script>	
+<style>
+ .flex-direction-nav a:before {
+    font-family: "flexslider-icon"; 
+ }
+ 
+</style>
+<script type="text/javascript">
+	$(function() {
+		$(".flexslider").flexslider({
+			slideshowSpeed: 4000, //展示时间间隔ms
+			animationSpeed: 400, //滚动时间ms
+			touch: true //是否支持触屏滑动
+		});
+				
+	});	
+</script>
+</head>
+
+<body>
+<div class="menu">
+			<p class="menuc">
+				<span></span>
+				<a class="cur" href="index.html">1、公告轮播图片插件</a>
+				<a href="note.html">2、word文档更换大写字母</a>							
+			</p>
+		</div>
+		<div class="main">
+			<div class="mianc">
+				<h1>带左右箭头且带按钮可滚动的图片插件</h1>
+				<!--<h2>5.案例:好的课首页公告轮播</h2>-->
+            
+<div class="flexslider" style="width:500px;margin-left:110px;">
+	<ul class="slides">
+		  <li><img  src="http://192.168.1.73:90/uploadFile/image/c786bc5d-2832-4c64-9931-6581666fd297.jpg" /></li>
+		<li><img src="http://192.168.1.73:90/uploadFile/image/add09ce3-1312-4ece-bd51-bda1838bbdc7.jpg" /></li>
+		<li><img src="http://192.168.1.73:90/uploadFile/image/c786bc5d-2832-4c64-9931-6581666fd297.jpg" /></li>
+		<li><img src="http://192.168.1.73:90/uploadFile/image/add09ce3-1312-4ece-bd51-bda1838bbdc7.jpg" /></li>
+	</ul>
+</div>
+ 
+ <p class="dowebok-explain"></p>
+			
+
+<!-- code start --> 
+<div class="code">
+	
+<h3 class="h31 cur">JavaScript</h3>
+<div class="pre">
+<pre class="pre-show prettyprint linenums">
+&lt;script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/jquery.flexslider-min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+	$(function() {
+		$(".flexslider").flexslider({
+			slideshowSpeed: 4000, //展示时间间隔ms
+			animationSpeed: 400, //滚动时间ms
+			touch: true //是否支持触屏滑动
+		});
+	});	
+&lt;/script&gt;
+</pre>
+</div>
+
+<h3 class="h32 ">HTML</h3>
+<div class="pre">
+<pre class="pre-show prettyprint linenums">
+    <!-- 代码--> 
+	&lt; class="flexslider" style="width:500px;margin-left:110px;"&gt;
+	&lt;ul class="slides"&gt;
+		&lt;li&gt;&lt;img src="images/sc1.jpg" /&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;img src="images/sc2.jpg" /&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;img src="images/sc3.jpg" /&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;img src="images/sc4.jpg" /&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+&lt;/div&gt;
+
+  </pre>
+</div>
+					
+<h3 class="h33">CSS</h3>
+<div class="pre">
+<pre class="pre-show prettyprint linenums">
+&lt;link rel="stylesheet" type="text/css" href="css/flexslider.css" /&gt;</pre>
+</div>
+					
+</div>
+ 
+ </div>
+ </div>
+</body>
+</html>
