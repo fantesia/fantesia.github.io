@@ -158,19 +158,152 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-3d" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-solrPart" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/25/3d/">nodeJs推荐的web开发框架Express</a>
+      <a class="article-title" href="/2017/05/31/solrPart/">solr搭建</a>
     </h1>
   
 
         
-        <a href="/2017/05/25/3d/" class="archive-article-date">
+        <a href="/2017/05/31/solrPart/" class="archive-article-date">
+  	<time datetime="2017-05-31T03:10:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Solr采用Lucene搜索库为核心，提供全文索引和搜索开源企业平台，提供REST的HTTP/XML和JSON的API。<br>下载solr5.5.1解压，在D:\solr-5.5.1\server 目录start.jar</p>
+<p>删除solr资源：<br><a href="http://localhost:8983/solr/resource_www/update/?stream.body=" target="_blank" rel="external">http://localhost:8983/solr/resource_www/update/?stream.body=</a>&lt;;delete&gt;<id>402881ae5543d202015543d9a6c50000</id>&amp;stream.contentType=text/xml;charset=utf-8&amp;commit=true</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/31/solrPart/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-thumbnailator" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/26/thumbnailator/">Thumbnailator生成图像缩略图</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/26/thumbnailator/" class="archive-article-date">
+  	<time datetime="2017-05-26T08:41:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Thumbnailator是一个用来生成图像缩略图的Java类库，通过很简单的代码即可生成图片缩略图。比ImageIO.read的BufferedImage/drawImage方法生成图片高清<br>•    可以生成多种质量模式的缩略图，也可直接对一整个目录的图片生成缩略图<br>•    如果需要的话，在生成缩略图的时候可以保持和源图像一样的的宽高比<br>•    在缩略图中嵌入水印，并且可以设置水印的透明度<br>•    对文件夹下所有图片生成缩略图<br>•    生成缩略图转换输出格式 ,forceSize( )方法输出宽高固定<br>•    生成一个带有旋转和水印的缩略图<br>•    图片尺寸不改变，只修改图片文件类型</p>
+<h3 id="生成缩略图片基本方法说明"><a href="#生成缩略图片基本方法说明" class="headerlink" title="生成缩略图片基本方法说明"></a>生成缩略图片基本方法说明</h3><p>2.1、outputQuality() 输出图片质量 ，范围在0.1至1内，1为高清。此方法必须输出jpg格式的图片。</p>
+<pre><code>//示例代码                                                                                     
+Thumbnails.of(srcFileName).scale(1f).outputQuality(0.2f).outputFormat(&quot;jpg&quot;).toFile(tagFile);        
+</code></pre><p>scale()输出图片尺寸大小 ，1为原图大小。 生成缩略图的大小是原来的25%</p>
+<pre><code>//示例代码                                                                                      
+ BufferedImage originalImage = ImageIO.read(new File(&quot;original.png&quot;));                            
+  BufferedImage thumbnail = Thumbnails.of(originalImage).scale(0.25f).asBufferedImage();            
+</code></pre>
+        
+          <a class="article-more-a" href="/2017/05/26/thumbnailator/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Thumbnailator</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">图片处理</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java/" class="article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/26/thumbnailator/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-express" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/25/express/">nodeJs推荐的web开发框架Express</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/25/express/" class="archive-article-date">
   	<time datetime="2017-05-25T08:38:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-25</time>
 </a>
         
@@ -208,10 +341,21 @@
 	</div>
 
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/nodeJs/" class="article-tag-list-link color2">nodeJs</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/25/3d/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/05/25/express/">展开全文 >></a>
         </p>
       
 
@@ -248,8 +392,9 @@
       
         <p>关于yilia主题 按钮 more怎么使用：<br>在文章中加入一行 小于号感叹号– more –大于号 （类似于一行注释，内容是more的代码）<br>可以将文章折叠，点击more按钮才展示全文。这样比较方便浏览，不至于在文章篇幅很长时要滚动很长的距离才能看到下一篇文章。</p>
 <p>注：我的hello-world文章内容在D:\myblog\source_posts\hello-world.md </p>
-<p>关于tags 如果想为文章配置tags，修改.md文件头部的tags字段。需要注意的是，如果是设置2个标签<br>正确的写法应该是：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"> title: Hello World</div><div class="line"> date: 2017-05-20 16:40:37</div><div class="line"> tags:  </div><div class="line">- Android</div><div class="line">- Mac</div></pre></td></tr></table></figure></p>
-<p> 注：我的内容在D:\myblog\source_posts\hello-world.md修改 ，我的tags就是“博客”只有这一个<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: Hello World</div><div class="line">date: 2017-05-20 16:40:37</div><div class="line">tags: 博客</div><div class="line">---</div></pre></td></tr></table></figure></p>
+<p>关于tags 如果想为文章配置tags，修改.md文件头部的tags字段。如果想为文章设置分类，就加上categories。<br>需要注意的是，如果是设置2个tags标签值（Thumbnailator，图片处理）<br>正确的写法应该是：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">  title: Hello World</div><div class="line">  date: 2017-05-20 16:40:37</div><div class="line">  tags: </div><div class="line">    - Thumbnailator</div><div class="line">    - 图片处理</div><div class="line">categories: 笔记</div></pre></td></tr></table></figure></p>
+<p> 注：我的内容在D:\myblog\source_posts\hello-world.md修改 ，我的tags就是“博客”只有这一个（注意属性和值之间的冒号后面都必须有空格）<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: Hello World</div><div class="line">date: 2017-05-20 16:40:37</div><div class="line">tags: 博客</div><div class="line">---</div></pre></td></tr></table></figure></p>
+<p>本文内容设置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: 关于yilia主题的笔记</div><div class="line">date: 2017-05-23 17:26:43</div><div class="line">tags: 主题</div><div class="line">categories: 笔记</div></pre></td></tr></table></figure></p>
 
       
 
@@ -263,13 +408,24 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">主题</a>
         		</li>
       		
 		</ul>
 	</div>
 
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/笔记/" class="article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
@@ -415,19 +571,19 @@
 
 
   
-    <article id="post-My-new-Post" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-copyFile" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/09/My-new-Post/">My new Post</a>
+      <a class="article-title" href="/2017/05/09/copyFile/">copyFile 复制文件到指定目录</a>
     </h1>
   
 
         
-        <a href="/2017/05/09/My-new-Post/" class="archive-article-date">
+        <a href="/2017/05/09/copyFile/" class="archive-article-date">
   	<time datetime="2017-05-09T01:33:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-09</time>
 </a>
         
@@ -435,8 +591,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>copyFile 复制文件到指定目录</p>
-<h3 id="Create-a-demo"><a href="#Create-a-demo" class="headerlink" title="Create a demo"></a>Create a demo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">public static void copyFile(String sour, String dest) &#123;  </div><div class="line">	        File sourFile =new File(sour);   </div><div class="line">	        String  filename =sourFile.getName();</div><div class="line">	        File uploadedFile = new File(dest, filename);</div><div class="line">	        FileInputStream input = null;</div><div class="line">	        FileOutputStream os = null;</div><div class="line">	        try&#123; </div><div class="line">	        	input= new FileInputStream(sourFile);</div><div class="line">	 	        os = new FileOutputStream(uploadedFile);</div><div class="line">		        byte buf[] = new byte[2048];//buf用于存放循环读取的临时数据, 可以修改 1024 以提高读取速度  </div><div class="line">		        int length = 0;</div><div class="line">		        <span class="keyword">while</span> ((length = input.read(buf)) &gt; 0) &#123;</div><div class="line">		        	os.write(buf, 0, length);//把每次写入到buffer数组的值再次叠加写入到内存缓冲区中。</div><div class="line">		        &#125;</div><div class="line">	        &#125;catch(IOException e)&#123;  </div><div class="line">	            e.printStackTrace();  </div><div class="line">	        &#125; finally &#123;</div><div class="line">				try &#123;</div><div class="line">					os.close();</div><div class="line">					input.close();</div><div class="line">				&#125; catch (IOException e) &#123;</div><div class="line">					e.printStackTrace();</div><div class="line">				&#125;</div><div class="line">			&#125; </div><div class="line">	    &#125;</div><div class="line"></div><div class="line"></div><div class="line">public static void main(String[] args)&#123;</div><div class="line"></div><div class="line">		 String sour = <span class="string">"D:\\www\\project\\uploadFile\\files\\book\\402881ae5c0b7235015c0b83a1dd0000\\OEBPS\\js\\test.js"</span>;  </div><div class="line">         String dest = <span class="string">"D:\\www\\project\\uploadFile\\files\\book\\402881ae5c193184015c195bf9590015\\OEBPS\\js\\"</span>;</div><div class="line">         copyFile(sour , dest);</div><div class="line">&#125;</div><div class="line"></div><div class="line">InputStream <span class="built_in">read</span>方法参数说明：</div><div class="line">InputStream.read(byte[] buffer, int byteOffset, int byteCount)</div><div class="line"></div><div class="line"><span class="built_in">read</span>(byte[] buffer , int byteOffset , int byteCount)</div><div class="line">从流中的当前位置（指针）读取byteCount个字节保存在以byteOffset位置（指针位置）开始的buffer中。返回实际读到的字节数，如果读到流的结尾返回-1</div></pre></td></tr></table></figure>
+        <h3 id="Create-a-demo"><a href="#Create-a-demo" class="headerlink" title="Create a demo"></a>Create a demo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">public static void copyFile(String sour, String dest) &#123;  </div><div class="line">	        File sourFile =new File(sour);   </div><div class="line">	        String  filename =sourFile.getName();</div><div class="line">	        File uploadedFile = new File(dest, filename);</div><div class="line">	        FileInputStream input = null;</div><div class="line">	        FileOutputStream os = null;</div><div class="line">	        try&#123; </div><div class="line">	        	input= new FileInputStream(sourFile);</div><div class="line">	 	        os = new FileOutputStream(uploadedFile);</div><div class="line">		        byte buf[] = new byte[2048];//buf用于存放循环读取的临时数据, 可以修改 1024 以提高读取速度  </div><div class="line">		        int length = 0;</div><div class="line">		        <span class="keyword">while</span> ((length = input.read(buf)) &gt; 0) &#123;</div><div class="line">		        	os.write(buf, 0, length);//把每次写入到buffer数组的值再次叠加写入到内存缓冲区中。</div><div class="line">		        &#125;</div><div class="line">	        &#125;catch(IOException e)&#123;  </div><div class="line">	            e.printStackTrace();  </div><div class="line">	        &#125; finally &#123;</div><div class="line">				try &#123;</div><div class="line">					os.close();</div><div class="line">					input.close();</div><div class="line">				&#125; catch (IOException e) &#123;</div><div class="line">					e.printStackTrace();</div><div class="line">				&#125;</div><div class="line">			&#125; </div><div class="line">	    &#125;</div><div class="line"></div><div class="line"></div><div class="line">public static void main(String[] args)&#123;</div><div class="line"></div><div class="line">		 String sour = <span class="string">"D:\\www\\project\\uploadFile\\files\\book\\402881ae5c0b7235015c0b83a1dd0000\\OEBPS\\js\\test.js"</span>;  </div><div class="line">         String dest = <span class="string">"D:\\www\\project\\uploadFile\\files\\book\\402881ae5c193184015c195bf9590015\\OEBPS\\js\\"</span>;</div><div class="line">         copyFile(sour , dest);</div><div class="line">&#125;</div><div class="line"></div><div class="line">InputStream <span class="built_in">read</span>方法参数说明：</div><div class="line">InputStream.read(byte[] buffer, int byteOffset, int byteCount)</div><div class="line"></div><div class="line"><span class="built_in">read</span>(byte[] buffer , int byteOffset , int byteCount)</div><div class="line">从流中的当前位置（指针）读取byteCount个字节保存在以byteOffset位置（指针位置）开始的buffer中。返回实际读到的字节数，如果读到流的结尾返回-1</div></pre></td></tr></table></figure>
       
 
       
@@ -459,7 +614,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/09/My-new-Post/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/05/09/copyFile/">展开全文 >></a>
         </p>
       
 
@@ -481,7 +636,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/05/Dom4jReadXml/">Dom4jReadXml</a>
+      <a class="article-title" href="/2017/05/05/Dom4jReadXml/">使用Dom4j解析Xml</a>
     </h1>
   
 
@@ -494,7 +649,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="使用Dom4j解析Xml"><a href="#使用Dom4j解析Xml" class="headerlink" title="使用Dom4j解析Xml"></a>使用Dom4j解析Xml</h3><p>代码内容请查看详情<br>
+        <p>使用Dom4j解析Xml代码内容请查看详情<br>
         
           <a class="article-more-a" href="/2017/05/05/Dom4jReadXml/#more">more >></a>
         
@@ -627,10 +782,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Express</a>
               </li>
              
@@ -639,11 +790,23 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">主题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Thumbnailator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">图片处理</a>
               </li>
             
             <div class="clearfix"></div>
@@ -718,7 +881,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">人生如寄&lt;br&gt;何事辛苦怨斜晖&lt;br&gt;</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">人生如寄&lt;br&gt;何事辛苦怨斜晖&lt;br&gt;My email-fantesia@163.com</div>
   	  	
     	</section>
     

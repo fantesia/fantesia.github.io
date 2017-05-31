@@ -6,17 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://fantesia.github.io">
-  <title>Tag: 水调歌头 | tesia的博客</title>
+  <title>Thumbnailator生成图像缩略图 | tesia的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="联系方式 fantesia@163.com">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tesia的博客">
-<meta property="og:url" content="https://fantesia.github.io/tags/水调歌头/index.html">
+  <meta name="description" content="Thumbnailator是一个用来生成图像缩略图的Java类库，通过很简单的代码即可生成图片缩略图。比ImageIO.read的BufferedImage/drawImage方法生成图片高清•    可以生成多种质量模式的缩略图，也可直接对一整个目录的图片生成缩略图•    如果需要的话，在生成缩略图的时候可以保持和源图像一样的的宽高比•    在缩略图中嵌入水印，并且可以设置水印的透明度•">
+<meta name="keywords" content="Thumbnailator,图片处理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Thumbnailator生成图像缩略图">
+<meta property="og:url" content="https://fantesia.github.io/2017/05/26/thumbnailator/index.html">
 <meta property="og:site_name" content="tesia的博客">
-<meta property="og:description" content="联系方式 fantesia@163.com">
+<meta property="og:description" content="Thumbnailator是一个用来生成图像缩略图的Java类库，通过很简单的代码即可生成图片缩略图。比ImageIO.read的BufferedImage/drawImage方法生成图片高清•    可以生成多种质量模式的缩略图，也可直接对一整个目录的图片生成缩略图•    如果需要的话，在生成缩略图的时候可以保持和源图像一样的的宽高比•    在缩略图中嵌入水印，并且可以设置水印的透明度•">
+<meta property="og:image" content="https://fantesia.github.io/img/posi.jpg">
+<meta property="og:updated_time" content="2017-05-31T02:43:55.433Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tesia的博客">
-<meta name="twitter:description" content="联系方式 fantesia@163.com">
+<meta name="twitter:title" content="Thumbnailator生成图像缩略图">
+<meta name="twitter:description" content="Thumbnailator是一个用来生成图像缩略图的Java类库，通过很简单的代码即可生成图片缩略图。比ImageIO.read的BufferedImage/drawImage方法生成图片高清•    可以生成多种质量模式的缩略图，也可直接对一整个目录的图片生成缩略图•    如果需要的话，在生成缩略图的时候可以保持和源图像一样的的宽高比•    在缩略图中嵌入水印，并且可以设置水印的透明度•">
+<meta name="twitter:image" content="https://fantesia.github.io/img/posi.jpg">
   
     <link rel="alternative" href="/atom.xml" title="tesia的博客" type="application/atom+xml">
   
@@ -156,60 +160,211 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-thumbnailator" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/22/aboutMe/" class="archive-article-date">
-  	<time datetime="2017-05-22T08:40:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/22/aboutMe/">水调歌头·隐括杜牧之齐山诗</a>
+    <h1 class="article-title" itemprop="name">
+      Thumbnailator生成图像缩略图
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/05/26/thumbnailator/" class="archive-article-date">
+  	<time datetime="2017-05-26T08:41:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Thumbnailator是一个用来生成图像缩略图的Java类库，通过很简单的代码即可生成图片缩略图。比ImageIO.read的BufferedImage/drawImage方法生成图片高清<br>•    可以生成多种质量模式的缩略图，也可直接对一整个目录的图片生成缩略图<br>•    如果需要的话，在生成缩略图的时候可以保持和源图像一样的的宽高比<br>•    在缩略图中嵌入水印，并且可以设置水印的透明度<br>•    对文件夹下所有图片生成缩略图<br>•    生成缩略图转换输出格式 ,forceSize( )方法输出宽高固定<br>•    生成一个带有旋转和水印的缩略图<br>•    图片尺寸不改变，只修改图片文件类型</p>
+<h3 id="生成缩略图片基本方法说明"><a href="#生成缩略图片基本方法说明" class="headerlink" title="生成缩略图片基本方法说明"></a>生成缩略图片基本方法说明</h3><p>2.1、outputQuality() 输出图片质量 ，范围在0.1至1内，1为高清。此方法必须输出jpg格式的图片。</p>
+<pre><code>//示例代码                                                                                     
+Thumbnails.of(srcFileName).scale(1f).outputQuality(0.2f).outputFormat(&quot;jpg&quot;).toFile(tagFile);        
+</code></pre><p>scale()输出图片尺寸大小 ，1为原图大小。 生成缩略图的大小是原来的25%</p>
+<pre><code>//示例代码                                                                                      
+ BufferedImage originalImage = ImageIO.read(new File(&quot;original.png&quot;));                            
+  BufferedImage thumbnail = Thumbnails.of(originalImage).scale(0.25f).asBufferedImage();            
+</code></pre><a id="more"></a>
+<p>2.2、对文件夹下所有图片生成缩略图<br>      Rename对处理后的图片名称重命名。命名格式如下几种：</p>
+<pre><code>假设原图为：picture.jpg
+</code></pre><p>•     NO_CHANGE : 不变(跟原图重名，则覆盖原图)，<br>•    PREFIX_DOT_THUMBNAIL生成图片为 : thumbnail.picture.jpg<br>•    PREFIX_HYPHEN_THUMBNAIL 生成图片为：thumbnail-picture.jpg<br>•    PREFIX_HYPTHEN_THUMBNAIL 生成图片为：thumbnail-picture.jpg<br>•    SUFFIX_DOT_THUMBNAIL生成图片为：picture.thumbnail.jpg<br>•    SUFFIX_HYPHEN_THUMBNAIL生成图片为：picture-thumbnail.jpg<br>•    SUFFIX_HYPTHEN_THUMBNAIL生成图片为：picture-thumbnail.jpg</p>
+<pre><code>//示例代码                                                                                         
+  String format=&quot;jpg&quot;; //生成的图片格式                                                              
+   int width=170;   //生成的图片宽                                                                   
+   int height=132;  //生成的图片高                                                                          
+ Thumbnails.of(new File(&quot;F:\\importexcel\\&quot;).listFiles())                                               
+       .size(width, height)                                                                                
+       .outputFormat(format)                                                                         
+       .toFiles(Rename.PREFIX_HYPHEN_THUMBNAIL);    
+</code></pre><p>注：listFiles方法只能操作jpeg图片格式           </p>
+<p>2.3、生成缩略图转换输出格式 ,forceSize()此方法输出宽高固定，不保持图片比例<br>      String srcFileName=”F:\importexcel\cs0418.jpg”; //源图片文件<br>       String tagFile=”F:\importexcel\cs0418_002”; //生成后图片<br>      String format=”jpg”; //生成的图片格式<br>        int width=170;   //生成的图片宽<br>        int height=132;  //生成的图片高                                                                  </p>
+<pre><code>//示例代码                                                                                       
+Thumbnails.of(srcFileName).forceSize(width, height)                                                 
+  .outputFormat(format)                                                                           
+  .toFile(tagFile);                                                                                  
+</code></pre><p>2.4、生成一个带有旋转和水印的缩略图：<br>● rotate() 旋转度<br>● watermark() 水印生成方法<br>Positions.BOTTOM_RIGHT 生成水印位置。取值个数如下图所示:<br>      底部中间 、左下、右下、中间、左中、右中、顶部中间、左上、右上等方位。<br>    <img src="https://fantesia.github.io/img/posi.jpg" style="width:600px;height:300px;"></p>
+<pre><code>       //示例代码                                                                                          
+Thumbnails.of(new File(&quot;original.jpg&quot;))                                                             
+   .size(120, 160)                                                                                   
+    .rotate(90)                                                                                      
+   .watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File(&quot;watermark.png&quot;)), 0.5f)                
+   .outputQuality(0.7f)                                                                              
+   .toFile(new File(&quot;image-with-watermark.jpg&quot;));                                                              
+</code></pre><p>   代码说明：从original.jpg这张图片生成尺寸宽120px,高160px，顺时针旋转90°，BOTTOM_RIGHT水印放在右下角，50%的透明度，<br>   70%的质量压缩的缩略图image-with-watermark.jpg   </p>
+<p>   2.5、图片尺寸不改变，只修改图片文件类型<br>      String srcFileName=”F:\importexcel\original.jpg”; //源图片文件<br>        String tagFile=”F:\importexcel\original_01”; //生成后图片 (注意这里不需要加图片格式）<br>        String format=”jpg”; //生成的图片格式                                                           </p>
+<pre><code>//示例代码                                                                                       
+ Thumbnails.of(srcFileName).scale(1f).outputFormat(format).toFile(tagFile);        
+</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢主隆恩<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">水调歌头</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Thumbnailator</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">图片处理</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java/" class="article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://fantesia.github.io/2017/05/26/thumbnailator/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/05/31/solrPart/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          solr搭建
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2017/05/25/express/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">nodeJs推荐的web开发框架Express</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -232,9 +387,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
