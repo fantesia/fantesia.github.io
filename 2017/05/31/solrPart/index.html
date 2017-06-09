@@ -8,16 +8,19 @@
   <link rel="dns-prefetch" href="https://fantesia.github.io">
   <title>solr搭建 | tesia的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Solr采用Lucene搜索库为核心，提供全文索引和搜索开源企业平台，提供REST的HTTP/XML和JSON的API。下载solr5.5.1解压，在D:\solr-5.5.1\server 目录start.jar 删除solr资源：http://localhost:8983/solr/resource_www/update/?stream.body=&amp;lt;;delete&amp;gt;402881ae">
+  <meta name="description" content="windows安装solr + tomcat8.0 1.先下载solr5.5.1解压，在D:/solr-5.5.1目录 2.新建文件夹目录D:/searchsolr5.5/solr ,再在目录下新建resource_www文件夹solrconfig.xml 、schema.xml、复制文件夹lang、lib 到resource_www目录下 3.D:/searchsolr5.5/apache-to">
+<meta name="keywords" content="solr">
 <meta property="og:type" content="article">
 <meta property="og:title" content="solr搭建">
 <meta property="og:url" content="https://fantesia.github.io/2017/05/31/solrPart/index.html">
 <meta property="og:site_name" content="tesia的博客">
-<meta property="og:description" content="Solr采用Lucene搜索库为核心，提供全文索引和搜索开源企业平台，提供REST的HTTP/XML和JSON的API。下载solr5.5.1解压，在D:\solr-5.5.1\server 目录start.jar 删除solr资源：http://localhost:8983/solr/resource_www/update/?stream.body=&amp;lt;;delete&amp;gt;402881ae">
-<meta property="og:updated_time" content="2017-05-31T03:35:37.920Z">
+<meta property="og:description" content="windows安装solr + tomcat8.0 1.先下载solr5.5.1解压，在D:/solr-5.5.1目录 2.新建文件夹目录D:/searchsolr5.5/solr ,再在目录下新建resource_www文件夹solrconfig.xml 、schema.xml、复制文件夹lang、lib 到resource_www目录下 3.D:/searchsolr5.5/apache-to">
+<meta property="og:image" content="https://fantesia.github.io/img/qsolr.jpg">
+<meta property="og:updated_time" content="2017-06-09T07:04:22.943Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="solr搭建">
-<meta name="twitter:description" content="Solr采用Lucene搜索库为核心，提供全文索引和搜索开源企业平台，提供REST的HTTP/XML和JSON的API。下载solr5.5.1解压，在D:\solr-5.5.1\server 目录start.jar 删除solr资源：http://localhost:8983/solr/resource_www/update/?stream.body=&amp;lt;;delete&amp;gt;402881ae">
+<meta name="twitter:description" content="windows安装solr + tomcat8.0 1.先下载solr5.5.1解压，在D:/solr-5.5.1目录 2.新建文件夹目录D:/searchsolr5.5/solr ,再在目录下新建resource_www文件夹solrconfig.xml 、schema.xml、复制文件夹lang、lib 到resource_www目录下 3.D:/searchsolr5.5/apache-to">
+<meta name="twitter:image" content="https://fantesia.github.io/img/qsolr.jpg">
   
     <link rel="alternative" href="/atom.xml" title="tesia的博客" type="application/atom+xml">
   
@@ -177,8 +180,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Solr采用Lucene搜索库为核心，提供全文索引和搜索开源企业平台，提供REST的HTTP/XML和JSON的API。<br>下载solr5.5.1解压，在D:\solr-5.5.1\server 目录start.jar</p>
-<p>删除solr资源：<br><a href="http://localhost:8983/solr/resource_www/update/?stream.body=" target="_blank" rel="external">http://localhost:8983/solr/resource_www/update/?stream.body=</a>&lt;;delete&gt;<id>402881ae5543d202015543d9a6c50000</id>&amp;stream.contentType=text/xml;charset=utf-8&amp;commit=true</p>
+        <p>windows安装solr + tomcat8.0</p>
+<p>1.先下载solr5.5.1解压，在D:/solr-5.5.1目录</p>
+<p>2.新建文件夹目录D:/searchsolr5.5/solr ,再在目录下新建resource_www文件夹<br>solrconfig.xml 、schema.xml、复制文件夹lang、lib 到resource_www目录下</p>
+<p>3.D:/searchsolr5.5/apache-tomcat-8.0.28/webapps 新建solr文件夹</p>
+<p>4.接下来copy D:/solr-5.5.1/server/solr-webapp/目录下的webapp目录拷贝到刚刚新建的solr文件夹,<br>  copy D:/solr-5.5.1/server/lib 目录下的jar包到 solr/WEB-INF/lib/  （注意这里solr是指 D:/searchsolr5.5/apache-tomcat-8.0.28/webapps/solr）</p>
+<p>5.修改 D:/searchsolr5.5/apache-tomcat-8.0.28/webapps/solr/WEB-INF/web.xml 配置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;env-entry&gt;</div><div class="line">    &lt;env-entry-name&gt;solr/home&lt;/env-entry-name&gt;</div><div class="line">    &lt;env-entry-value&gt;../../solr&lt;/env-entry-value&gt;</div><div class="line">    &lt;env-entry-type&gt;java.lang.String&lt;/env-entry-type&gt;</div><div class="line"> &lt;/env-entry&gt;</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>6.在D:/searchsolr5.5/apache-tomcat-8.0.28/conf/server.xml默认是8080端口号修改为8983:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;Connector port=<span class="string">"8983"</span> protocol=<span class="string">"HTTP/1.1"</span></div><div class="line">              connectionTimeout=<span class="string">"20000"</span></div><div class="line">              redirectPort=<span class="string">"8443"</span> /&gt;</div></pre></td></tr></table></figure></p>
+<p>为避免启动时影响我启动的其他服务停止，修改了shutdown端口号默认是8005 改为8006：</p>
+<pre><code class="bash">&lt;Server port=<span class="string">"8006"</span> shutdown=<span class="string">"SHUTDOWN"</span>&gt;
+</code></pre>
+<p>7.启动tomcat:D:/searchsolr5.5/apache-tomcat-8.0.28/bin/ 双击 startup.bat<br>8.访问<a href="http://localhost:8983/solr/admin.html" target="_blank" rel="external">http://localhost:8983/solr/admin.html</a><br>9.在core_admin 点击Add core ，name填写resource_www ,instanceDir填写resource_www,再点击Add core<br> <a href="http://localhost:8983/solr/admin.html#/resource_www/query" target="_blank" rel="external">http://localhost:8983/solr/admin.html#/resource_www/query</a></p>
+<p>之前在tomcat7部署solr5.5启动后报错：<br>严重: Servlet.service() for servlet [LoadAdminUI] in context with path [/SOLR_SEARCH] threw exception [Filter execution threw an exception] with root cause<br>java.lang.NoSuchMethodError: javax.servlet.ServletInputStream.isFinished()Z<br>    at org.apache.solr.servlet.SolrDispatchFilter.consumeInputFully(SolrDispatchFilter.java:256)<br>    at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:246)</p>
+<p>Java.lang.NoSuchMethodError: javax.servlet.ServletInputStream.isFinished()Z 是提示找不到ServletInputStream类下面的isFinished()方法<br>是JAR包问题，这个类所在的jar包servlet-api.jar<br>solr5版本以上的部署最好使用JDK1.8</p>
+<p>创建过程参考了几位前辈的博客：<br><a href="http://blog.csdn.net/moxuelang/article/details/51417925" target="_blank" rel="external">http://blog.csdn.net/moxuelang/article/details/51417925</a><br><a href="http://www.cnblogs.com/sword-successful/p/5594918.html" target="_blank" rel="external">http://www.cnblogs.com/sword-successful/p/5594918.html</a></p>
+<p>工作中使用到的查询solr:<br><img src="https://fantesia.github.io/img/qsolr.jpg" style="width:660px;height:320px;"></p>
+<p>删除solr资源使用：</p>
+<pre><code class="bash">http://localhost:8983/solr/resource_www/update/?stream.body=&lt;;delete&gt;&lt;id&gt;402881ae5543d202015543d9a6c50000&lt;/id&gt;&lt;/delete&gt;&amp;stream.contentType=text/xml;charset=utf-8&amp;commit=<span class="literal">true</span>
+</code></pre>
 
       
 
@@ -208,6 +228,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">solr</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -382,10 +413,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Express</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">水调歌头</a>
               </li>
              
@@ -394,7 +421,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+                <a href="javascript:void(0)" class="js-tag color3">Express</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -407,6 +434,14 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">图片处理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">solr</a>
               </li>
             
             <div class="clearfix"></div>

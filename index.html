@@ -178,9 +178,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Solr采用Lucene搜索库为核心，提供全文索引和搜索开源企业平台，提供REST的HTTP/XML和JSON的API。<br>下载solr5.5.1解压，在D:\solr-5.5.1\server 目录start.jar</p>
-<p>删除solr资源：<br><a href="http://localhost:8983/solr/resource_www/update/?stream.body=" target="_blank" rel="external">http://localhost:8983/solr/resource_www/update/?stream.body=</a>&lt;;delete&gt;<id>402881ae5543d202015543d9a6c50000</id>&amp;stream.contentType=text/xml;charset=utf-8&amp;commit=true</p>
-
+        <p>windows安装solr + tomcat8.0</p>
+<p>1.先下载solr5.5.1解压，在D:/solr-5.5.1目录</p>
+<p>2.新建文件夹目录D:/searchsolr5.5/solr ,再在目录下新建resource_www文件夹<br>solrconfig.xml 、schema.xml、复制文件夹lang、lib 到resource_www目录下</p>
+<p>3.D:/searchsolr5.5/apache-tomcat-8.0.28/webapps 新建solr文件夹</p>
+<p>4.接下来copy D:/solr-5.5.1/server/solr-webapp/目录下的webapp目录拷贝到刚刚新建的solr文件夹,<br>  copy D:/solr-5.5.1/server/lib 目录下的jar包到 solr/WEB-INF/lib/  （注意这里solr是指 D:/searchsolr5.5/apache-tomcat-8.0.28/webapps/solr）</p>
+<p>5.修改 D:/searchsolr5.5/apache-tomcat-8.0.28/webapps/solr/WEB-INF/web.xml 配置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;env-entry&gt;</div><div class="line">    &lt;env-entry-name&gt;solr/home&lt;/env-entry-name&gt;</div><div class="line">    &lt;env-entry-value&gt;../../solr&lt;/env-entry-value&gt;</div><div class="line">    &lt;env-entry-type&gt;java.lang.String&lt;/env-entry-type&gt;</div><div class="line"> &lt;/env-entry&gt;</div></pre></td></tr></table></figure></p>
+        
+          <a class="article-more-a" href="/2017/05/31/solrPart/#more">more >></a>
+        
       
 
       
@@ -188,6 +194,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">solr</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -782,10 +799,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Express</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">水调歌头</a>
               </li>
              
@@ -794,7 +807,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+                <a href="javascript:void(0)" class="js-tag color3">Express</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -807,6 +820,14 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">图片处理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">solr</a>
               </li>
             
             <div class="clearfix"></div>
