@@ -17,7 +17,7 @@
 <meta property="og:description" content="windows安装solr + tomcat8.0 1.先下载solr5.5.1解压，在D:/solr-5.5.1目录 2.新建文件夹目录D:/searchsolr5.5/solr ,再在目录下新建resource_www文件夹solrconfig.xml 、schema.xml、复制文件夹lang、lib 到resource_www目录下 3.D:/searchsolr5.5/apache-to">
 <meta property="og:image" content="https://fantesia.github.io/img/21.jpg">
 <meta property="og:image" content="https://fantesia.github.io/img/qsolr.jpg">
-<meta property="og:updated_time" content="2017-06-30T09:20:24.200Z">
+<meta property="og:updated_time" content="2019-05-21T09:07:26.161Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="solr搭建">
 <meta name="twitter:description" content="windows安装solr + tomcat8.0 1.先下载solr5.5.1解压，在D:/solr-5.5.1目录 2.新建文件夹目录D:/searchsolr5.5/solr ,再在目录下新建resource_www文件夹solrconfig.xml 、schema.xml、复制文件夹lang、lib 到resource_www目录下 3.D:/searchsolr5.5/apache-to">
@@ -26,7 +26,7 @@
     <link rel="alternative" href="/atom.xml" title="tesia的博客" type="application/atom+xml">
   
   
-    <link rel="icon" href="https://fantesia.github.io/img/dog.jpeg">
+    <link rel="icon" href="https://fantesia.github.io/img/qqf.png">
   
   <link rel="stylesheet" type="text/css" href="/./main.b3331d.css">
   <style type="text/css">
@@ -53,7 +53,7 @@
 			<img src="https://fantesia.github.io/img/qqf.png" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">零度一一</a></h1>
+		  <h1 class="header-author"><a href="/">轻轻</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">我思故我在</p>
@@ -113,7 +113,7 @@
 				<img src="https://fantesia.github.io/img/qqf.png" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">零度一一</h1>
+			  <h1 class="header-author js-header-author">轻轻</h1>
 			</hgroup>
 			
 			<p class="header-subtitle"><i class="icon icon-quo-left"></i>我思故我在<i class="icon icon-quo-right"></i></p>
@@ -179,15 +179,17 @@
         
       </header>
     
+	<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
         <p><img src="https://fantesia.github.io/img/21.jpg" style="width:500px;height:300px;"><br>windows安装solr + tomcat8.0</p>
 <p>1.先下载solr5.5.1解压，在D:/solr-5.5.1目录</p>
 <p>2.新建文件夹目录D:/searchsolr5.5/solr ,再在目录下新建resource_www文件夹<br>solrconfig.xml 、schema.xml、复制文件夹lang、lib 到resource_www目录下</p>
-<p>3.D:/searchsolr5.5/apache-tomcat-8.0.28/webapps 新建solr文件夹</p>
-<p>4.接下来copy D:/solr-5.5.1/server/solr-webapp/目录下的webapp目录拷贝到刚刚新建的solr文件夹,<br>  copy D:/solr-5.5.1/server/lib 目录下的jar包到 solr/WEB-INF/lib/  （注意这里solr是指 D:/searchsolr5.5/apache-tomcat-8.0.28/webapps/solr）</p>
+<p>3.D:/searchsolr5.5/apache-tomcat-8.0.28/webapps 新建solr文件夹<br><a id="more"></a><br>4.接下来copy D:/solr-5.5.1/server/solr-webapp/目录下的webapp目录拷贝到刚刚新建的solr文件夹,<br>  copy D:/solr-5.5.1/server/lib 目录下的jar包到 solr/WEB-INF/lib/  （注意这里solr是指 D:/searchsolr5.5/apache-tomcat-8.0.28/webapps/solr）</p>
 <p>5.修改 D:/searchsolr5.5/apache-tomcat-8.0.28/webapps/solr/WEB-INF/web.xml 配置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;env-entry&gt;</div><div class="line">    &lt;env-entry-name&gt;solr/home&lt;/env-entry-name&gt;</div><div class="line">    &lt;env-entry-value&gt;../../solr&lt;/env-entry-value&gt;</div><div class="line">    &lt;env-entry-type&gt;java.lang.String&lt;/env-entry-type&gt;</div><div class="line"> &lt;/env-entry&gt;</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
+<!-- more -->
 <p>6.在D:/searchsolr5.5/apache-tomcat-8.0.28/conf/server.xml默认是8080端口号修改为8983:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;Connector port=<span class="string">"8983"</span> protocol=<span class="string">"HTTP/1.1"</span></div><div class="line">              connectionTimeout=<span class="string">"20000"</span></div><div class="line">              redirectPort=<span class="string">"8443"</span> /&gt;</div></pre></td></tr></table></figure></p>
 <p>为避免启动时影响我启动的其他服务停止，修改了shutdown端口号默认是8005 改为8006：</p>
 <pre><code class="bash">&lt;Server port=<span class="string">"8006"</span> shutdown=<span class="string">"SHUTDOWN"</span>&gt;
@@ -341,7 +343,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 零度一一
+    		&copy; 2019 轻轻
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -423,15 +425,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">水调歌头</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -439,19 +437,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">喜欢的</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">solr</a>
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">向往、喜欢</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">喜欢的</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -463,7 +457,19 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">solr</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">主题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">普通话练习</a>
               </li>
             
             <div class="clearfix"></div>
@@ -530,7 +536,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">人生如寄&lt;br&gt;何事辛苦怨斜晖&lt;br&gt;My email-fantesia@163.com</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">愿你岁月无波澜&lt;br&gt;祝我余生不悲观&lt;br&gt;My email-fantesia@163.com</div>
   	  	
     	</section>
     
