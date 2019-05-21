@@ -6,22 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://fantesia.github.io">
-  <title>solr搭建 | tesia的博客</title>
+  <title>tesia的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="windows安装solr + tomcat8.0 1.先下载solr5.5.1解压，在D:/solr-5.5.1目录 2.新建文件夹目录D:/searchsolr5.5/solr ,再在目录下新建resource_www文件夹solrconfig.xml 、schema.xml、复制文件夹lang、lib 到resource_www目录下 3.D:/searchsolr5.5/apache-to">
-<meta name="keywords" content="solr">
-<meta property="og:type" content="article">
-<meta property="og:title" content="solr搭建">
-<meta property="og:url" content="https://fantesia.github.io/2017/05/31/solrPart/index.html">
+  <meta name="description" content="联系方式 fantesia@163.com">
+<meta property="og:type" content="website">
+<meta property="og:title" content="tesia的博客">
+<meta property="og:url" content="https://fantesia.github.io/page/2/index.html">
 <meta property="og:site_name" content="tesia的博客">
-<meta property="og:description" content="windows安装solr + tomcat8.0 1.先下载solr5.5.1解压，在D:/solr-5.5.1目录 2.新建文件夹目录D:/searchsolr5.5/solr ,再在目录下新建resource_www文件夹solrconfig.xml 、schema.xml、复制文件夹lang、lib 到resource_www目录下 3.D:/searchsolr5.5/apache-to">
-<meta property="og:image" content="https://fantesia.github.io/img/21.jpg">
-<meta property="og:image" content="https://fantesia.github.io/img/qsolr.jpg">
-<meta property="og:updated_time" content="2017-06-30T09:20:24.200Z">
+<meta property="og:description" content="联系方式 fantesia@163.com">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="solr搭建">
-<meta name="twitter:description" content="windows安装solr + tomcat8.0 1.先下载solr5.5.1解压，在D:/solr-5.5.1目录 2.新建文件夹目录D:/searchsolr5.5/solr ,再在目录下新建resource_www文件夹solrconfig.xml 、schema.xml、复制文件夹lang、lib 到resource_www目录下 3.D:/searchsolr5.5/apache-to">
-<meta name="twitter:image" content="https://fantesia.github.io/img/21.jpg">
+<meta name="twitter:title" content="tesia的博客">
+<meta name="twitter:description" content="联系方式 fantesia@163.com">
   
     <link rel="alternative" href="/atom.xml" title="tesia的博客" type="application/atom+xml">
   
@@ -161,69 +156,31 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-solrPart" class="article article-type-post " itemscope itemprop="blogPost">
+            
+  
+    <article id="post-copyFile" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      solr搭建
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/09/copyFile/">copyFile 复制文件到指定目录</a>
     </h1>
   
 
         
-        <a href="/2017/05/31/solrPart/" class="archive-article-date">
-  	<time datetime="2017-05-31T03:10:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-31</time>
+        <a href="/2017/05/09/copyFile/" class="archive-article-date">
+  	<time datetime="2017-05-09T01:33:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://fantesia.github.io/img/21.jpg" style="width:500px;height:300px;"><br>windows安装solr + tomcat8.0</p>
-<p>1.先下载solr5.5.1解压，在D:/solr-5.5.1目录</p>
-<p>2.新建文件夹目录D:/searchsolr5.5/solr ,再在目录下新建resource_www文件夹<br>solrconfig.xml 、schema.xml、复制文件夹lang、lib 到resource_www目录下</p>
-<p>3.D:/searchsolr5.5/apache-tomcat-8.0.28/webapps 新建solr文件夹</p>
-<p>4.接下来copy D:/solr-5.5.1/server/solr-webapp/目录下的webapp目录拷贝到刚刚新建的solr文件夹,<br>  copy D:/solr-5.5.1/server/lib 目录下的jar包到 solr/WEB-INF/lib/  （注意这里solr是指 D:/searchsolr5.5/apache-tomcat-8.0.28/webapps/solr）</p>
-<p>5.修改 D:/searchsolr5.5/apache-tomcat-8.0.28/webapps/solr/WEB-INF/web.xml 配置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;env-entry&gt;</div><div class="line">    &lt;env-entry-name&gt;solr/home&lt;/env-entry-name&gt;</div><div class="line">    &lt;env-entry-value&gt;../../solr&lt;/env-entry-value&gt;</div><div class="line">    &lt;env-entry-type&gt;java.lang.String&lt;/env-entry-type&gt;</div><div class="line"> &lt;/env-entry&gt;</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<p>6.在D:/searchsolr5.5/apache-tomcat-8.0.28/conf/server.xml默认是8080端口号修改为8983:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;Connector port=<span class="string">"8983"</span> protocol=<span class="string">"HTTP/1.1"</span></div><div class="line">              connectionTimeout=<span class="string">"20000"</span></div><div class="line">              redirectPort=<span class="string">"8443"</span> /&gt;</div></pre></td></tr></table></figure></p>
-<p>为避免启动时影响我启动的其他服务停止，修改了shutdown端口号默认是8005 改为8006：</p>
-<pre><code class="bash">&lt;Server port=<span class="string">"8006"</span> shutdown=<span class="string">"SHUTDOWN"</span>&gt;
-</code></pre>
-<p>7.启动tomcat:D:/searchsolr5.5/apache-tomcat-8.0.28/bin/ 双击 startup.bat<br>8.访问<a href="http://localhost:8983/solr/admin.html" target="_blank" rel="external">http://localhost:8983/solr/admin.html</a><br>9.在core_admin 点击Add core ，name填写resource_www ,instanceDir填写resource_www,再点击Add core<br> <a href="http://localhost:8983/solr/admin.html#/resource_www/query" target="_blank" rel="external">http://localhost:8983/solr/admin.html#/resource_www/query</a></p>
-<p>之前在tomcat7部署solr5.5启动后报错：<br>严重: Servlet.service() for servlet [LoadAdminUI] in context with path [/SOLR_SEARCH] threw exception [Filter execution threw an exception] with root cause<br>java.lang.NoSuchMethodError: javax.servlet.ServletInputStream.isFinished()Z<br>    at org.apache.solr.servlet.SolrDispatchFilter.consumeInputFully(SolrDispatchFilter.java:256)<br>    at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:246)</p>
-<p>Java.lang.NoSuchMethodError: javax.servlet.ServletInputStream.isFinished()Z 是提示找不到ServletInputStream类下面的isFinished()方法<br>是JAR包问题，这个类所在的jar包servlet-api.jar<br>solr5版本以上的部署最好使用JDK1.8</p>
-<p>创建过程参考了几位前辈的博客：<br><a href="http://blog.csdn.net/moxuelang/article/details/51417925" target="_blank" rel="external">http://blog.csdn.net/moxuelang/article/details/51417925</a><br><a href="http://www.cnblogs.com/sword-successful/p/5594918.html" target="_blank" rel="external">http://www.cnblogs.com/sword-successful/p/5594918.html</a></p>
-<p>工作中使用到的查询solr:<br><img src="https://fantesia.github.io/img/qsolr.jpg" style="width:660px;height:320px;"></p>
-<p>删除solr资源使用：</p>
-<pre><code class="bash">http://localhost:8983/solr/resource_www/update/?stream.body=&lt;;delete&gt;&lt;id&gt;402881ae5543d202015543d9a6c50000&lt;/id&gt;&lt;/delete&gt;&amp;stream.contentType=text/xml;charset=utf-8&amp;commit=<span class="literal">true</span>
-</code></pre>
-
+        <h3 id="Create-a-demo"><a href="#Create-a-demo" class="headerlink" title="Create a demo"></a>Create a demo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">public static void copyFile(String sour, String dest) &#123;  </div><div class="line">	        File sourFile =new File(sour);   </div><div class="line">	        String  filename =sourFile.getName();</div><div class="line">	        File uploadedFile = new File(dest, filename);</div><div class="line">	        FileInputStream input = null;</div><div class="line">	        FileOutputStream os = null;</div><div class="line">	        try&#123; </div><div class="line">	        	input= new FileInputStream(sourFile);</div><div class="line">	 	        os = new FileOutputStream(uploadedFile);</div><div class="line">		        byte buf[] = new byte[2048];//buf用于存放循环读取的临时数据, 可以修改 1024 以提高读取速度  </div><div class="line">		        int length = 0;</div><div class="line">		        <span class="keyword">while</span> ((length = input.read(buf)) &gt; 0) &#123;</div><div class="line">		        	os.write(buf, 0, length);//把每次写入到buffer数组的值再次叠加写入到内存缓冲区中。</div><div class="line">		        &#125;</div><div class="line">	        &#125;catch(IOException e)&#123;  </div><div class="line">	            e.printStackTrace();  </div><div class="line">	        &#125; finally &#123;</div><div class="line">				try &#123;</div><div class="line">					os.close();</div><div class="line">					input.close();</div><div class="line">				&#125; catch (IOException e) &#123;</div><div class="line">					e.printStackTrace();</div><div class="line">				&#125;</div><div class="line">			&#125; </div><div class="line">	    &#125;</div><div class="line"></div><div class="line"></div><div class="line">public static void main(String[] args)&#123;</div><div class="line"></div><div class="line">		 String sour = <span class="string">"D:\\www\\project\\uploadFile\\files\\book\\402881ae5c0b7235015c0b83a1dd0000\\OEBPS\\js\\test.js"</span>;  </div><div class="line">         String dest = <span class="string">"D:\\www\\project\\uploadFile\\files\\book\\402881ae5c193184015c195bf9590015\\OEBPS\\js\\"</span>;</div><div class="line">         copyFile(sour , dest);</div><div class="line">&#125;</div><div class="line"></div><div class="line">InputStream <span class="built_in">read</span>方法参数说明：</div><div class="line">InputStream.read(byte[] buffer, int byteOffset, int byteCount)</div><div class="line"></div><div class="line"><span class="built_in">read</span>(byte[] buffer , int byteOffset , int byteCount)</div><div class="line">从流中的当前位置（指针）读取byteCount个字节保存在以byteOffset位置（指针位置）开始的buffer中。返回实际读到的字节数，如果读到流的结尾返回-1</div></pre></td></tr></table></figure>
       
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢主隆恩<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -234,7 +191,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">solr</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
         		</li>
       		
 		</ul>
@@ -243,83 +200,77 @@
       
 
       
-
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/09/copyFile/">展开全文 >></a>
+        </p>
       
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
 
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://fantesia.github.io/2017/05/31/solrPart/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
+
+
+
+
   
-<nav id="article-nav">
-  
-    <a href="/2019/05/21/my-idol/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
+    <article id="post-Dom4jReadXml" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
         
-          我喜欢的明星
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/05/Dom4jReadXml/">使用Dom4j解析Xml</a>
+    </h1>
+  
+
         
-      </div>
-    </a>
-  
-  
-    <a href="/2017/05/30/child/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">被五岁小孩的天真打败</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
+        <a href="/2017/05/05/Dom4jReadXml/" class="archive-article-date">
+  	<time datetime="2017-05-05T09:25:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>使用Dom4j解析Xml代码内容请查看详情<br>
+        
+          <a class="article-more-a" href="/2017/05/05/Dom4jReadXml/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/05/Dom4jReadXml/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
 
 
 
@@ -327,10 +278,9 @@
 
   
   
-  
-
-  
-
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
   
 
 
@@ -353,8 +303,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
-		isPost: true,
+		isHome: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
