@@ -51,7 +51,7 @@ img#about-image{float: left;margin: 3px 8px 8px 0px;}
 /* IE6*/*:first-child+html .clearfix{zoom: 1;}
 /*------------------------------------------------*//*--------------[FEATURED SLIDER]-----------------*//*------------------------------------------------*/
 .container{text-align: left;margin: 0 auto;width: 960px;position: relative;}
-#featured{overflow: hidden;height: 403px;position: relative;}
+#featured{overflow: hidden;height: 700px;position: relative;}
 #featured .slide{position: absolute;z-index: 1;background: url(../images/slide-bg.png) no-repeat;padding: 6px 6px 25px;}
 #featured .active{z-index: 2;background: url(../images/active-slide-bg.png) no-repeat;padding: 6px 6px 25px;}
 #slider-left-overlay, #slider-right-overlay{position: absolute;top: 60px;height: 263px;z-index: 3;}
