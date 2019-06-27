@@ -158,6 +158,435 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-child" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/30/child/">被五岁小孩的天真打败</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/30/child/" class="archive-article-date">
+  	<time datetime="2017-05-30T07:08:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-30</time>
+</a>
+        
+      </header>
+    
+	<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>和小孩子聊天才发现她们逻辑思维很特别</p>
+<p>晚饭后，在哥哥家对面有个很可爱的小女孩过来玩<br>我问她叫什么名字<br>她很认真地说，我有两个名字，一个叫万雨晴，另一个叫雨晴。<br>我说不就是同一个吗<br>她说她同学也都有两个名字，老师有时候会叫她雨晴，有时候叫她万雨晴。<br>
+        
+          <a class="article-more-a" href="/2017/05/30/child/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/30/child/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-thumbnailator" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/26/thumbnailator/">Thumbnailator生成图像缩略图</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/26/thumbnailator/" class="archive-article-date">
+  	<time datetime="2017-05-26T08:41:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-26</time>
+</a>
+        
+      </header>
+    
+	<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Thumbnailator是一个用来生成图像缩略图的Java类库，通过很简单的代码即可生成图片缩略图。比ImageIO.read的BufferedImage/drawImage方法生成图片高清<br>•    可以生成多种质量模式的缩略图，也可直接对一整个目录的图片生成缩略图<br>•    如果需要的话，在生成缩略图的时候可以保持和源图像一样的的宽高比<br>•    在缩略图中嵌入水印，并且可以设置水印的透明度<br>•    对文件夹下所有图片生成缩略图<br>•    生成缩略图转换输出格式 ,forceSize( )方法输出宽高固定<br>•    生成一个带有旋转和水印的缩略图<br>•    图片尺寸不改变，只修改图片文件类型</p>
+<h3 id="生成缩略图片基本方法说明"><a href="#生成缩略图片基本方法说明" class="headerlink" title="生成缩略图片基本方法说明"></a>生成缩略图片基本方法说明</h3><p>2.1、outputQuality() 输出图片质量 ，范围在0.1至1内，1为高清。此方法必须输出jpg格式的图片。</p>
+<pre><code>//示例代码                                                                                     
+Thumbnails.of(srcFileName).scale(1f).outputQuality(0.2f).outputFormat(&quot;jpg&quot;).toFile(tagFile);        
+</code></pre><p>scale()输出图片尺寸大小 ，1为原图大小。 生成缩略图的大小是原来的25%</p>
+<pre><code>//示例代码                                                                                      
+ BufferedImage originalImage = ImageIO.read(new File(&quot;original.png&quot;));                            
+  BufferedImage thumbnail = Thumbnails.of(originalImage).scale(0.25f).asBufferedImage();            
+</code></pre>
+        
+          <a class="article-more-a" href="/2017/05/26/thumbnailator/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Thumbnailator</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">图片处理</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java/" class="article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/26/thumbnailator/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-express" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/25/express/">nodeJs推荐的web开发框架Express</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/25/express/" class="archive-article-date">
+  	<time datetime="2017-05-25T08:38:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-25</time>
+</a>
+        
+      </header>
+    
+	<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> Express 默认提供的引擎是 jade，它颠覆了传统的模板引擎，制定了一套完整的语法用来生成 HTML 的每个标签结构，功能强大但不易学习。<br>  ● jade基础语法介绍</p>
+<p>   jade支持通过js语法形式运行一些表达式，最简单常用的循环：<br>   拿index.jade文件内容举例：<br>   <img src="https://fantesia.github.io/img/clipboard.png" style="width:620px;height:227px;"></p>
+<p>   使用notepad++编写jade模板代码，提示Invalid indentation, you can use tabs  异常原因：<br>   jade模板 嵌套格式要么使用tab要么使用空格，不能混着用。<br>   所以建议使用sublime text，然后安装一个插件jade build。每次使用command+b就可以直接生成html，有问题会提示。<br>   使用快捷的介绍请看：<a href="http://sublime.emptystack.net/" target="_blank" rel="external">http://sublime.emptystack.net/</a> </p>
+<p>   jade bulid插件的安装和使用：<a href="https://sublime.wbond.net/packages/Jade" target="_blank" rel="external">https://sublime.wbond.net/packages/Jade</a> Build<br>   git命令：下载插件到”Jade Build”这个目录<br>   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> git://github.com/mutian/Sublime-Jade-Build.git <span class="string">"Jade Build"</span></div></pre></td></tr></table></figure></p>
+<p>  ● ejs（Embedded JavaScript） 是一个标签替换引擎，其语法与 ASP、 PHP 相似，易于学习，目前被广泛应用。<br>
+        
+          <a class="article-more-a" href="/2017/05/25/express/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Express</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/nodeJs/" class="article-tag-list-link color2">nodeJs</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/25/express/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-myNotes" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/23/myNotes/">关于yilia主题的笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/23/myNotes/" class="archive-article-date">
+  	<time datetime="2017-05-23T09:26:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-23</time>
+</a>
+        
+      </header>
+    
+	<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>关于yilia主题 按钮 more怎么使用：<br>在文章中加入一行 小于号感叹号– more –大于号 （类似于一行注释，内容是more的代码）<br>可以将文章折叠，点击more按钮才展示全文。这样比较方便浏览，不至于在文章篇幅很长时要滚动很长的距离才能看到下一篇文章。</p>
+        
+          <a class="article-more-a" href="/2017/05/23/myNotes/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">主题</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/笔记/" class="article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/23/myNotes/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-aboutMe" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/22/aboutMe/">水调歌头·隐括杜牧之齐山诗</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/22/aboutMe/" class="archive-article-date">
+  	<time datetime="2017-05-22T08:40:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-22</time>
+</a>
+        
+      </header>
+    
+	<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> <img src="https://fantesia.github.io/img/dog.jpeg" style="width:200px;height:200px;"></p>
+<p>&nbsp;<br>         《水调歌头·隐括杜牧之齐山诗》<br>                     宋.朱熹<br>          江水浸云影，鸿雁欲南飞。<br>          携壶结客何处？空翠渺烟霏。<br>          尘世难逢一笑，况有紫萸黄菊，堪插满头归。<br>          风景今朝是，身世昔人非。<br>          酬佳节，须酩酊，莫相违。<br>          人生如寄，何事辛苦怨斜晖。<br>          无尽今来古往，多少春花秋月，那更有危机。<br>          与问牛山客，何必独沾衣。</p>
+<p>more: <a href="http://so.gushiwen.org/mingju/ju_4659.aspx" target="_blank" rel="external">赏析网</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">水调歌头</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/22/aboutMe/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/20/hello-world/">Hello World</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/20/hello-world/" class="archive-article-date">
+  	<time datetime="2017-05-20T08:40:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-20</time>
+</a>
+        
+      </header>
+    
+	<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br>1.在D:\myblog\themes\yilia\ 修改_config.yml 模板内容，左边菜单更新<br>2.在D:\myblog\source_posts 可修改博客内容。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">3.使用 标签 &amp;ensp; 文章开头就会空格，使用 &lt;!-- more --&gt; 就表示更多</div></pre></td></tr></table></figure></p>
+<p>4.命令<br>$ hexo g<br>$ hexo d<br>重启 $ hexo server</p>
+<p>注： D:\myblog\public\img 图片存放路径<br>More info: <a href="https://fantesia.github.io/">我的主页on GitHub</a></p>
+        
+          <a class="article-more-a" href="/2017/05/20/hello-world/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">博客</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/20/hello-world/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-copyFile" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -379,11 +808,23 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">水调歌头</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Express</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">社会公德/环境保护</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">普通话练习</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -395,11 +836,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">普通话练习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">向往、喜欢</a>
+                <a href="javascript:void(0)" class="js-tag color5">科技发展与社会生活/环境保护</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -423,7 +860,19 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">水调歌头</a>
+                <a href="javascript:void(0)" class="js-tag color1">卫生与健康</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">修养</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">向往、喜欢</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">节日、风俗</a>
               </li>
             
             <div class="clearfix"></div>
